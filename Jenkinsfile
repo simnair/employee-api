@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+    tools {
+        maven 'maven'
+    }
+
     stages {
 
         stage('Build') {
@@ -17,9 +21,9 @@ pipeline {
 
         stage('Deploy') {
             steps {
-                sh 'docker run -d -p 8082:8082 learn04mar26'
+                sh 'docker run -d -p 8088:8080 learn04mar26'
             }
         }
+
     }
 }
-
