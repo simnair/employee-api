@@ -26,12 +26,13 @@ pipeline {
             }
         }
 
-
         stage('Deploy') {
-            steps {
-                sh 'docker run -d -p 8088:8080 --name employee-api learn04mar26'
-            }
-        }
+	   steps {
+                 sh 'docker rm -f employee-api || true'
+                 sh 'docker run -d -p 8088:8080 --add-host=host.docker.internal:host-gateway --name employee-api learn04mar26'
+    }
+}
+
 
     }
 }
