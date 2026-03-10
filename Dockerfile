@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY target/learn04mar26-0.0.1-SNAPSHOT.jar app.jar
 
-EXPOSE 8082
+EXPOSE 8080
 
 ENTRYPOINT ["java","-jar","app.jar"]
 
