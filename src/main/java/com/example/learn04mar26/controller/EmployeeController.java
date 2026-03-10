@@ -18,5 +18,9 @@ public class EmployeeController {
     public List<Employee> getEmployees() {
         return employeeService.getAllEmployees();
     }
+     @GetMapping
+	public String testApi(){
+	return "Jenkins Pipeline working";
+   }
 }
 
