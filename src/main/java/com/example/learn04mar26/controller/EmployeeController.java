@@ -22,5 +22,10 @@ public class EmployeeController {
 	public String testApi(){
 	return "Jenkins Pipeline working this is testing 2";
    }
+    @GetMapping("/version")
+          public String version() {
+	return "Application version V2";
+	}
+
 }
 
