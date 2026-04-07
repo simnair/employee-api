@@ -9,10 +9,11 @@ pipeline {
 
 stage('Checkout') { 
        steps { 
-	      'git https://github.com/simnair/employee-api.git'
+	      git 'https://github.com/simnair/employee-api.git'
              } 
 
         }   
+
         stage('Build') {
             steps {
                 sh 'mvn clean package'
