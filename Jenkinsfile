@@ -7,7 +7,12 @@ pipeline {
 
     stages {
 
+stage('Clean Workspace'){
+     steps {
+          deleteDir() 
+            }
 
+        }    
         stage('Build') {
             steps {
                 sh 'mvn clean package'
@@ -37,3 +42,4 @@ pipeline {
 
     }
 }
+
