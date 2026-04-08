@@ -7,12 +7,6 @@ pipeline {
 
     stages {
 
-stage('Checkout') { 
-       steps { 
-	      git 'https://github.com/simnair/employee-api.git'
-             } 
-
-        }   
 
         stage('Build') {
             steps {
